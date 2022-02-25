@@ -26,7 +26,7 @@ Load balancing ensures that the application will be highly available, in additio
     Load balancers help protect the good network traffic from the bad network traffic. They increase application availability, responsivenes and prevent server overload. 
 
 - What is the advantage of a jump box?
-    The advantage is the jump box provides a secured access point to the web servers and prevents public acccess. 
+    The advantage is the jump-box provides a secured access point to the web servers and prevents public acccess. 
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the configuration and system files.
 - What does Filebeat watch for? 
@@ -35,33 +35,31 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - What does Metricbeat record? 
     Metricbeat records metrics and statistics from the sytstem and services running on the server.
 
-The configuration details of each machine may be found below.
-![Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.]
-
 | Name     | Function  | IP Address | Operating System |
 |----------|-----------|------------|------------------|
 | Jump Box | Gateway   | 10.0.0.1   | Linux            |
 | WEB-1    | Webserver | 10.0.0.5   | Linux            |
 | WEB-2    | Webserver | 10.0.0.6   | Linux            |
-| ELK      | Monitoring| 10.1.0.4   | Linux            |
+| ELK-NET  | Monitoring| 10.1.0.4   | Linux            |
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- 64.72.118.76
+- 20.106.97.78
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by the jump-box.
+- Which machine did you allow to access your ELK VM? What was its IP address? 20.106.97.78
 
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Jump Box | Yes                 | 10.0.0.1 10.0.0.2    |
+| Web-1    | No                  | 20.106.97.78         |
+| Web-2    | No                  | 20.106.97.78         |
+| ELK-NET  | Yes (http)          | 20.106.97.78         |
 
 ### Elk Configuration
 
