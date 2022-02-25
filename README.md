@@ -1,3 +1,9 @@
+## Cloud Network
+
+This is a collection of Linux Scripts and Ansible Scripts from my Cyber Class. Most of the scripts are used to configure cloud servers with different docker containers. 
+
+The final setup was 3 servers running vulnerable DVWA containers along with a jump-box and a server running an ELK stack container.
+
 ## Automated ELK Stack Deployment
 
 The files in this repository were used to configure the network depicted below.
