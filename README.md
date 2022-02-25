@@ -87,9 +87,7 @@ We have installed the following Beats on these machines:
     Metricbeat & Filebeat
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
-
- Filebeat monitors Log files or Log events and forwards them to either Elasticsearch or Logstash for indexing. Metricbeat helps you monitor the integrity of your file system in your server through metrics and stats.
+- Filebeat monitors Log files or Log events and forwards them to either Elasticsearch or Logstash for indexing.  Metricbeat helps you monitor the integrity of your file system in your server through metrics and stats.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
@@ -99,7 +97,7 @@ SSH into the control node and follow the steps below:
 - Update the ansible host file to include...
 - Run the playbook, and navigate to the Jumpbox to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
+
 - Which file is the playbook? elk-playbook.yml 
 - Where do you copy it? filebeat-playbook.yml to /etc/ansible/roles
 - Which file do you update to make Ansible run the playbook on a specific machine? elk-playbook.yml 
