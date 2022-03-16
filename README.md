@@ -43,7 +43,7 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 
 | Name     | Function  | IP Address | Operating System |
 |----------|-----------|------------|------------------|
-| Jump Box | Gateway   | 10.0.0.1   | Linux            |
+| Jump Box | Gateway   | 10.0.0.4   | Linux            |
 | WEB-1    | Webserver | 10.0.0.5   | Linux            |
 | WEB-2    | Webserver | 10.0.0.6   | Linux            |
 | ELK-NET  | Monitoring| 10.1.0.4   | Linux            |
@@ -53,19 +53,19 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- 20.106.97.78
+- My IP address
 
 Machines within the network can only be accessed by the jump-box.
-- Which machine did you allow to access your ELK VM? What was its IP address? 20.106.97.78
+- Which machine did you allow to access your ELK VM? What was its IP address? 10.0.0.4
 
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes                 | 10.0.0.1 10.0.0.2    |
-| Web-1    | No                  | 20.106.97.78         |
-| Web-2    | No                  | 20.106.97.78         |
-| ELK-NET  | Yes (http)          | 20.106.97.78         |
+| Jump Box | Yes                 | My IP                |
+| Web-1    | No                  | 10.0.0.4             |
+| Web-2    | No                  | 10.0.0.4             |
+| ELK-NET  | Yes (http)          | 10.0.0.4             |
 
 ### Elk Configuration
 
@@ -86,7 +86,7 @@ The following screenshot displays the result of running `docker ps` after succes
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
 - List the IP addresses of the machines you are monitoring
-    10.0.0.4 10.0.0.5 10.0.0.6 10.1.0.4
+     10.0.0.5 10.0.0.6 10.1.0.4
 
 We have installed the following Beats on these machines:
 - Specify which Beats you successfully installed
@@ -108,7 +108,7 @@ SSH into the control node and follow the steps below:
 - Where do you copy it? filebeat-playbook.yml to /etc/ansible/roles
 - Which file do you update to make Ansible run the playbook on a specific machine? elk-playbook.yml 
 - How do I specify which machine to install the ELK server on vs which to install Filebeat on? Specify the servers IP. 
-- _Which URL do you navigate to in order to check that the ELK server is running? http://[ELK-VM-IP]:5601/app/kibana
+- _Which URL do you navigate to in order to check that the ELK server is running? http://[13.72.87.7]:5601/app/kibana
 
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
