@@ -29,17 +29,17 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
 - What aspect of security do load balancers protect? 
-    Load balancers help protect the good network traffic from the bad network traffic. They increase application availability, responsivenes and prevent server overload. 
+ Load balancers help protect the good network traffic from the bad network traffic. They increase application availability, responsivenes and prevent server overload. 
 
 - What is the advantage of a jump box?
-    The advantage is the jump-box provides a secured access point to the web servers and prevents public acccess. 
+The advantage is the jump-box provides a secured access point to the web servers and prevents public acccess. 
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the configuration and system files.
 - What does Filebeat watch for? 
-    Log files or Log events
+Log files or Log events
 
 - What does Metricbeat record? 
-    Metricbeat records metrics and statistics from the sytstem and services running on the server.
+Metricbeat records metrics and statistics from the sytstem and services running on the server.
 
 | Name     | Function  | IP Address | Operating System |
 |----------|-----------|------------|------------------|
@@ -56,7 +56,8 @@ Only the Jump Box machine can accept connections from the Internet. Access to th
 - My IP address
 
 Machines within the network can only be accessed by the jump-box.
-- Which machine did you allow to access your ELK VM? What was its IP address? 10.0.0.4
+- Which machine did you allow to access your ELK VM? What was its IP address? 
+10.0.0.4
 
 A summary of the access policies in place can be found in the table below.
 
@@ -71,7 +72,7 @@ A summary of the access policies in place can be found in the table below.
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
 - What is the main advantage of automating configuration with Ansible? 
-    The main advantage is being able to make changes with any of the VM's in the network. 
+The main advantage is being able to make changes with any of the VM's in the network. 
 
 The playbook implements the following tasks:
 - Install Docker.io
@@ -86,11 +87,11 @@ The following screenshot displays the result of running `docker ps` after succes
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
 - List the IP addresses of the machines you are monitoring
-     10.0.0.5 10.0.0.6 10.1.0.4
+10.0.0.5 10.0.0.6 10.1.0.4
 
 We have installed the following Beats on these machines:
 - Specify which Beats you successfully installed
-    Metricbeat & Filebeat
+Metricbeat & Filebeat
 
 These Beats allow us to collect the following information from each machine:
 - Filebeat monitors Log files or Log events and forwards them to either Elasticsearch or Logstash for indexing.  Metricbeat helps you monitor the integrity of your file system in your server through metrics and stats.
